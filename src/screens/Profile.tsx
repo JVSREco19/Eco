@@ -3,8 +3,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import Hamburguer from "../components/Hamburguer";
 import { FontAwesome } from "@expo/vector-icons";
 import Footer from "../components/Footer";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Profile() {
+  const { navigate } = useNavigation();
+
   return (
     <View className="flex-1">
       <LinearGradient
@@ -14,7 +17,7 @@ export default function Profile() {
           "rgba(26, 33, 218, 0.85)",
           "rgba(26, 33, 218, 0.75)",
         ]}
-        className="flex-row justify-around w-full h-72 top-6"
+        className="flex-row justify-around w-full h-72"
       >
         <View className="flex-column items-center justify-center w-56">
           <Image
@@ -29,7 +32,10 @@ export default function Profile() {
           </Text>
         </View>
 
-        <TouchableOpacity className="absolute right-5 top-6">
+        <TouchableOpacity
+          className="absolute right-5 top-8"
+          onPress={() => navigate("editProfile")}
+        >
           <FontAwesome name="edit" size={36} color="white" />
         </TouchableOpacity>
       </LinearGradient>

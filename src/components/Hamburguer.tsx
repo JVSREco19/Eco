@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, TouchableOpacity, Text, Image } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Hamburguer() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +11,10 @@ export default function Hamburguer() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const { navigate } = useNavigation();
+
   return (
-    <View className="flex-row items-center left-0 px-2 pt-6">
+    <View className="flex px-2">
       <TouchableOpacity onPress={toggleMenu}>
         <Entypo name="menu" size={42} color="white" />
       </TouchableOpacity>
@@ -31,18 +34,17 @@ export default function Hamburguer() {
             onPress={toggleMenu}
           >
             <Entypo name="cross" size={42} color="white" />
-            <View></View>
           </TouchableOpacity>
           <View className="px-6 top-60 bg-[#F7F1E5] h-screen">
             <TouchableOpacity
               className="mt-5"
-              onPress={() => console.log("Opção 1")}
+              onPress={() => navigate("profile")}
             >
               <Text className="text-xl text-[#002B5B]">Perfil</Text>
             </TouchableOpacity>
             <TouchableOpacity
               className="mt-5"
-              onPress={() => console.log("Opção 2")}
+              onPress={() => navigate("events")}
             >
               <Text className="text-xl text-[#002B5B]">Eventos</Text>
             </TouchableOpacity>
@@ -60,7 +62,7 @@ export default function Hamburguer() {
             </TouchableOpacity>
             <TouchableOpacity
               className="mt-5"
-              onPress={() => console.log("Opção 5")}
+              onPress={() => navigate("login")}
             >
               <Text className="text-xl text-[#002B5B]">Sair</Text>
             </TouchableOpacity>

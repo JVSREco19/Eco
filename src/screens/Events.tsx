@@ -9,7 +9,7 @@ export default function Events() {
     <View className="flex-1 relative bg-[#F9F5EB]">
       <Header />
 
-      <View className="flex-row justify-between items-center px-4 mt-28">
+      <View className="flex px-4 mt-20">
         <Text className="text-2xl font-bold text-[#2a2894] ">
           Eventos Patrocinados
         </Text>
@@ -17,7 +17,7 @@ export default function Events() {
 
       <View className="flex-1 items-center mt-5">
         <ScrollView
-          className="max-h-[480]"
+          className="max-h-[500]"
           showsVerticalScrollIndicator={false}
         >
           <View className="flex">

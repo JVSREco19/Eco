@@ -10,8 +10,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import Footer from "../components/Footer";
+import { useNavigation } from "@react-navigation/native";
 
 export default function EditProfile() {
+  const { navigate } = useNavigation();
+
   return (
     <View className="flex-1">
       <LinearGradient
@@ -21,9 +24,12 @@ export default function EditProfile() {
           "rgba(26, 33, 218, 0.85)",
           "rgba(26, 33, 218, 0.75)",
         ]}
-        className="flex-row justify-around w-full h-72 top-6"
+        className="flex-row justify-around w-full h-72"
       >
-        <TouchableOpacity className="top-4 left-4 absolute">
+        <TouchableOpacity
+          className="top-4 left-4 absolute"
+          onPress={() => navigate("profile")}
+        >
           <AntDesign name="arrowleft" size={42} color="white" />
         </TouchableOpacity>
         <View className="flex-column items-center justify-center w-56">
@@ -49,7 +55,10 @@ export default function EditProfile() {
           </View>
         </View>
 
-        <TouchableOpacity className="absolute right-5 top-6">
+        <TouchableOpacity
+          className="absolute right-5 top-6"
+          onPress={() => navigate("profile")}
+        >
           <AntDesign name="check" size={36} color="white" />
         </TouchableOpacity>
       </LinearGradient>

@@ -3,12 +3,15 @@ import Header from "../components/Header";
 import { AntDesign } from "@expo/vector-icons";
 import Input from "../components/Input";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Cadastro() {
+  const { goBack, navigate } = useNavigation();
+
   return (
     <View className="flex-1 h-full bg-[#F9F5EB]">
       <Header />
-      <TouchableOpacity className="top-9 left-4">
+      <TouchableOpacity className="top-6 left-4" onPress={goBack}>
         <AntDesign name="arrowleft" size={42} color="white" />
       </TouchableOpacity>
 
@@ -32,7 +35,7 @@ export default function Cadastro() {
           <Input placeholder={"Cidade"}></Input>
           <Input placeholder={"Faculdade"}></Input>
         </ScrollView>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigate("login")}>
           <LinearGradient
             colors={[
               "#121AD9",

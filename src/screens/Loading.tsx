@@ -1,7 +1,21 @@
+import React, { useEffect } from 'react';
 import { ActivityIndicator, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from '@react-navigation/native';
 
 export default function Loading() {
+
+
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      navigation.navigate('login');
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <LinearGradient
       colors={[

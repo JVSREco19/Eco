@@ -11,7 +11,7 @@ import {
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import Home from "./Home";
+import Header from "../components/Header";
 
 export default function Login() {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -20,7 +20,7 @@ export default function Login() {
     setIsEnabled((previousState) => !previousState);
   };
 
-  const {navigate} = useNavigation()
+  const { navigate } = useNavigation();
   return (
     <View className="flex-1 items-center bg-[#F9F5EB]">
       <Image
@@ -63,7 +63,7 @@ export default function Login() {
         <Text className="text-base">Permanecer conectado</Text>
       </View>
 
-      <TouchableOpacity onPress={()=>navigate("cadastro")}>
+      <TouchableOpacity onPress={() => navigate("home")}>
         <LinearGradient
           colors={[
             "#121AD9",
@@ -81,7 +81,7 @@ export default function Login() {
         <Text className="text-sm text-blue-900">Recuperar senha</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity className="mt-6">
+      <TouchableOpacity className="mt-6" onPress={() => navigate("cadastro")}>
         <Text className="text-2xl text-blue-600">Criar Conta</Text>
       </TouchableOpacity>
     </View>
