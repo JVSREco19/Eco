@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 import {
   TextInput,
   View,
@@ -10,6 +11,7 @@ import {
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import Home from "./Home";
 
 export default function Login() {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -18,6 +20,7 @@ export default function Login() {
     setIsEnabled((previousState) => !previousState);
   };
 
+  const {navigate} = useNavigation()
   return (
     <View className="flex-1 items-center bg-[#F9F5EB]">
       <Image
@@ -60,7 +63,7 @@ export default function Login() {
         <Text className="text-base">Permanecer conectado</Text>
       </View>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigate("cadastro")}>
         <LinearGradient
           colors={[
             "#121AD9",

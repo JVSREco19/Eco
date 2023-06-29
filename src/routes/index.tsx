@@ -6,9 +6,9 @@ import  AppRoutes  from './app.routes'
 export default function Routes() {
     return (
         <View className='flex-1'>
-            <NavigationContainer>
+            
                 <AppRoutes />
-            </NavigationContainer>
+            
         </View>
     )
 }
