@@ -26,14 +26,14 @@ export default function Cadastro() {
           contentContainerStyle={{ paddingRight: 30 }}
           persistentScrollbar={true}
         >
-          <Input placeholder={"Nome"}></Input>
-          <Input placeholder={"Email"}></Input>
-          <Input placeholder={"Confirmar Email"}></Input>
-          <Input placeholder={"Senha"}></Input>
-          <Input placeholder={"Confirmar Senha"}></Input>
-          <Input placeholder={"Estado"}></Input>
-          <Input placeholder={"Cidade"}></Input>
-          <Input placeholder={"Faculdade"}></Input>
+          <Input placeholder={"Nome"} maxlength={25}></Input>
+          <Input placeholder={"Email"} maxlength={50}></Input>
+          <Input placeholder={"Confirmar Email"} maxlength={50}></Input>
+          <Input placeholder={"Senha"} maxlength={12}></Input>
+          <Input placeholder={"Confirmar Senha"} maxlength={12}></Input>
+          <Input placeholder={"Estado"} maxlength={30}></Input>
+          <Input placeholder={"Cidade"} maxlength={30}></Input>
+          <Input placeholder={"Faculdade"} maxlength={100}></Input>
         </ScrollView>
         <TouchableOpacity onPress={() => navigate("login")}>
           <LinearGradient

@@ -27,7 +27,7 @@ export default function EditProfile() {
         className="flex-row justify-around w-full h-72"
       >
         <TouchableOpacity
-          className="top-4 left-4 absolute"
+          className="top-6 left-4 absolute"
           onPress={() => navigate("profile")}
         >
           <AntDesign name="arrowleft" size={42} color="white" />
@@ -40,6 +40,7 @@ export default function EditProfile() {
           <View className="flex-row items-center w-50 border-b border-white mb-4 px-2 text-xl">
             <TextInput
               placeholder={"Nome"}
+              maxLength={30}
               placeholderTextColor="white"
               className="w-40 h-10 text-base text-white"
             />
@@ -48,6 +49,7 @@ export default function EditProfile() {
           <View className="flex-row items-center w-50 border-b border-white mb-4 px-2 text-xl">
             <TextInput
               placeholder={"Universidade"}
+              maxLength={100}
               placeholderTextColor="white"
               className="w-40 h-10 text-xs text-white"
             />
@@ -56,16 +58,16 @@ export default function EditProfile() {
         </View>
 
         <TouchableOpacity
-          className="absolute right-5 top-6"
+          className="absolute right-5 top-7"
           onPress={() => navigate("profile")}
         >
           <AntDesign name="check" size={36} color="white" />
         </TouchableOpacity>
       </LinearGradient>
 
-      <View className="bg-[#F9F5EB]  flex-1">
-        <ScrollView className="max-h-96 " showsVerticalScrollIndicator={false}>
-          <View className="pt-2 left-5 w-[90%]">
+      <View className="bg-[#F9F5EB] flex-1">
+        <ScrollView className="max-h-96" showsVerticalScrollIndicator={false}>
+          <View className="pt-2 left-4 w-[90%]">
             <Text className="text-[#002B5B] text-xl font-bold">Sobre Mim</Text>
             <View className="flex-row items-center border-b border-[#002B5B] py-1 px-2 text-xl">
               <TextInput
@@ -74,7 +76,7 @@ export default function EditProfile() {
                 textAlignVertical="top"
                 maxLength={300}
                 placeholderTextColor="#002B5B"
-                className="w-[90%] text-sm text-[#002B5B]"
+                className="w-[90%] text-sm text-[#002B5B] pt-2"
               />
               <MaterialIcons name="edit" size={24} color="#002B5B" />
             </View>
@@ -91,6 +93,7 @@ export default function EditProfile() {
               />
               <TextInput
                 placeholder={"URL Instagram"}
+                maxLength={25}
                 placeholderTextColor="#002B5B"
                 className="w-40 h-10 text-xs text-[#002B5B] px-2"
               />
@@ -103,6 +106,7 @@ export default function EditProfile() {
               />
               <TextInput
                 placeholder={"URL Linkedin"}
+                maxLength={25}
                 placeholderTextColor="#002B5B"
                 className="w-40 h-10 text-xs text-[#002B5B] px-2"
               />
@@ -115,27 +119,28 @@ export default function EditProfile() {
               />
               <TextInput
                 placeholder={"URL GitHub"}
+                maxLength={25}
                 placeholderTextColor="#002B5B"
                 className="w-40 h-10 text-xs text-[#002B5B] px-2"
               />
               <MaterialIcons name="edit" size={24} color="#002B5B" />
             </View>
-          </View>
-
-          <View className="mt-4 justify-center items-center">
-            <View className="flex-row items-center w-50 border-b border-[#002B5B] mb-4 px-2 text-xl">
+            <View className="flex-row justify-between items-center w-56 border-b border-[#002B5B] mb-4 px-2 text-xl">
               <TextInput
                 placeholder={"Curso"}
                 placeholderTextColor="#002B5B"
-                className="w-40 h-10 text-xs text-[#002B5B]"
+                maxLength={40}
+                className="w-40 h-10 text-xs text-[#002B5B] px-2"
               />
               <MaterialIcons name="edit" size={24} color="#002B5B" />
             </View>
-            <View className="flex-row items-center w-50 border-b border-[#002B5B] mb-4 px-2 text-xl">
+            <View className="flex-row justify-between items-center w-56 border-b border-[#002B5B] mb-4 px-2 text-xl">
               <TextInput
                 placeholder={"Telefone"}
+                maxLength={11}
+                keyboardType="numeric"
                 placeholderTextColor="#002B5B"
-                className="w-40 h-10 text-xs text-[#002B5B]"
+                className="w-40 h-10 text-xs text-[#002B5B] px-2"
               />
               <MaterialIcons name="edit" size={24} color="#002B5B" />
             </View>

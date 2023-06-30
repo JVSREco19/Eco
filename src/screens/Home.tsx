@@ -4,15 +4,18 @@ import Hamburguer from "../components/Hamburguer";
 import RectangleInfo from "../components/RectangleInfo";
 import Footer from "../components/Footer";
 
+import Medicine from "../assets/medicine.svg";
+
 export default function Home() {
   return (
     <View className="flex-1 relative bg-[#F9F5EB]">
       <Header />
 
-      <View className="flex px-4 mt-20">
+      <View className="flex-row px-4 mt-20 items-center justify-around">
         <Text className="text-2xl font-bold text-[#2a2894] ">
           Saúde e Bem Estar
         </Text>
+        <Medicine width={120} height={60} />
       </View>
 
       <View className="flex-1 items-center mt-5">

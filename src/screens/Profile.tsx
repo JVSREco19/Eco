@@ -5,6 +5,8 @@ import { FontAwesome } from "@expo/vector-icons";
 import Footer from "../components/Footer";
 import { useNavigation } from "@react-navigation/native";
 
+import ProfileSVG from "../assets/profileSVG.svg";
+
 export default function Profile() {
   const { navigate } = useNavigation();
 
@@ -64,13 +66,18 @@ export default function Profile() {
             style={{ width: 60, height: 60, borderRadius: 50 }}
           />
         </View>
-        <View className="mt-10 justify-center items-center">
-          <Text className="text-[#002B5B] text-base font-semibold">
-            Curso: Engenharia de Computação
-          </Text>
-          <Text className="text-[#002B5B] text-base font-semibold mt-2">
-            Telefone: 99 99999-9999
-          </Text>
+        <View className="flex-row mt-8 left-5 px-2 justify-around items-center">
+          <View className="w-56 mb-8">
+            <Text className="text-[#002B5B] text-sm font-semibold">
+              Curso: Engenharia de Computação
+            </Text>
+            <Text className="text-[#002B5B] text-sm font-semibold mt-2">
+              Telefone: 99 99999-9999
+            </Text>
+          </View>
+          <View className="">
+            <ProfileSVG width={160} height={120} />
+          </View>
         </View>
       </View>
 
