@@ -10,6 +10,7 @@ export declare global {
             loading: undefined;
             profile: undefined;
             editProfile: undefined;
+            settings: undefined;
         }
     }
 }

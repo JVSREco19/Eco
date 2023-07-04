@@ -1,7 +1,6 @@
-import Loading from "./src/screens/Loading";
 import Routes from "./src/routes";
-import Login from "./src/screens/Login";
 import { StatusBar } from "react-native";
+import Settings from "./src/screens/Settings";
 
 export default function App() {
   return (

@@ -50,14 +50,11 @@ export default function Hamburguer() {
             </TouchableOpacity>
             <TouchableOpacity
               className="mt-5"
-              onPress={() => console.log("Opção 3")}
+              onPress={() => navigate("settings")}
             >
               <Text className="text-xl text-[#002B5B]">Configurações</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              className="mt-5"
-              onPress={() => console.log("Opção 4")}
-            >
+            <TouchableOpacity className="mt-5">
               <Text className="text-xl text-[#002B5B]">Fale Conosco</Text>
             </TouchableOpacity>
             <TouchableOpacity

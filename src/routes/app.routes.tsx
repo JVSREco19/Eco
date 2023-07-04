@@ -12,6 +12,7 @@ import HomeInformation from "../screens/HomeInformation";
 import Loading from "../screens/Loading";
 import Profile from "../screens/Profile";
 import EditProfile from "../screens/EditProfile";
+import Settings from "../screens/Settings";
 
 export default function AppRoutes() {
   return (
@@ -26,6 +27,7 @@ export default function AppRoutes() {
         <Stack.Screen name="homeInformation" component={HomeInformation} />
         <Stack.Screen name="profile" component={Profile} />
         <Stack.Screen name="editProfile" component={EditProfile} />
+        <Stack.Screen name="settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>
   );
